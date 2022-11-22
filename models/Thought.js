@@ -1,29 +1,43 @@
+const { Schema, model } = require('mongoose');
+const Reaction = require('./Reaction');
 
-// thoughtText
-    // string, required, must be between 1 and 280 characters
+// Schema to create Thought model
+const thoughtSchema = new Schema(
+    {
+        // thoughtText: string, required, must be between 1 and 280 characters
+        thoughtText: { 
+            type: String, required: true, 
+            minLength: 1, 
+            maxLength: 28 
+        },
+        // createdAt: date, default - current timestamp, use getter to format the timestamp on a query
+        createdAt: {
+            type: Date,
+            default: Date.now
+        },
+        // username: user that created the thought, string, required
+        username: { 
+            type: String, 
+            required: true
+        },
+        // reactions: array of nested documents created with the reactionSchema
+        reactions: [Reaction],
+    },
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
+    }
+);
 
-// createdAt
-    // date, set default value to current timestamp, use a getter to format the timestamp on a query
 
-// username (user that created the thought)
-    // string, required
+// Create a virtual called reactionCount that retrieves the length of the thought's reactions array field on query.
+thoughtSchema.virtual('reactionCount').get(function () {
+    return this.reactions.length;
+});
 
-// reactions (these are like replies)
-    // array of nested documents created with the reactionSchema
+// initialize the Thought model
+const Thought = model('thought', thoughtSchema);
 
-// Schema settings
-    // Create a virtual called reactionCount that retrieves the length of the thought's reactions array field on query.
-
-// reaction
-    // reactionId
-        // use mongoose's ObjectId data type
-        // default value is set to a new ObjectId
-    // reactionBody
-        // string, required, 280 char max
-    // username
-        // string, required
-    // createdAt
-        // date, set default to current timestamp, use a getter method to format the timestamp on query
-
-    // This will not be a model, but rather will be used as the reaction field's subdocument schema in the Thought model.
-
+module.exports = Thought;
