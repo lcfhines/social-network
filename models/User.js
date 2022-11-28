@@ -26,7 +26,8 @@ const userSchema = new Schema(
         // friends: array of _id values referencing the User model
         friends: [{
             type: Schema.Types.ObjectId, 
-            ref: 'user'}],
+            ref: 'user'
+        }],
     },
     {
         toJSON: {

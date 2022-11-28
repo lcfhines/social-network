@@ -14,8 +14,6 @@ Make sure you have MongoDB installed and set up on your machine.
 
 To install Express.js and mongoose, run ```npm i```.
 
-To seed data to test the routes, run ```node utils/seed```.
-
 ## Usage
 
 To start the server, run ```node index```.
