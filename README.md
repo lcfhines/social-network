@@ -30,18 +30,28 @@ The following routes should be tested:
  The walkthrough videos below show these routes being tested in Insomnia.
 
  ### Users
- This video shows finding all users, creating a user, finding a single user, updating a user, and deleting a user.
+ This video shows starting the application's server, navigating to Insomnia and finding all users, creating a user, finding a single user, updating a user, and deleting a user.
+
+https://user-images.githubusercontent.com/113798073/204405140-3e4454da-29e1-43dc-bb09-dddf64d4bffb.mp4
 
  This video demonstrates that when a user is deleted, their associated thoughts are also deleted. 
+
+https://user-images.githubusercontent.com/113798073/204405182-5dc4ab3c-e5fd-4f89-a517-cf075dbc174d.mp4
 
  ### Thoughts
  This video shows finding all thoughts, creating a thought, finding a single thought, updating a thought, and deleting a thought.
 
+https://user-images.githubusercontent.com/113798073/204405218-4f30d7cb-32d4-4f34-8e16-d21a65d44829.mp4
+
  ### Reactions
  This video shows creating a reaction to a thought and deleting a reaction.
 
+https://user-images.githubusercontent.com/113798073/204405246-12b11e34-f8ff-48fa-919b-c7591420f811.mp4
+
  ### Friends
  This video shows adding a friend to a user's friend list and remove a friend from a user's friend list.
+
+https://user-images.githubusercontent.com/113798073/204405259-e098b370-f051-49e6-8a5c-fe0dfce0f2f8.mp4
 
 ## Technologies
 
