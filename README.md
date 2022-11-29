@@ -8,6 +8,17 @@ This application is an API for a social network web application where users can 
 
 The app uses Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Demo: Users](#users)
+- [Demo: Thoughts](#thoughts)
+- [Demo: Reactions](#reactions)
+- [Demo: Friends](#friends)
+- [Credits](#credits)
+- [License](#license)
+
 ## Installation
 
 Make sure you have MongoDB installed and set up on your machine. 
